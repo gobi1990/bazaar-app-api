@@ -3,13 +3,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 import postgres from 'postgres';
 
-const sql = postgres({
+const pool = postgres({
     host: process.env.DATABASE_HOST,
     database: process.env.DATABASE_NAME,
     username: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     ssl: 'require',
-  })
+  });
 
 
 app.get('/api/data', (req, res) => {
