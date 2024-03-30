@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro",
+      "description": "A high-performance smartphone with advanced features.",
+      "price": 599.99,
+      "quantity": 100,
+      "brand": "Apple",
+      "shopname": "TechStore"
+    },
+    {
+      "id": 2,
+      "name": "Asus Laptop",
+      "description": "A powerful laptop for professionals and gamers.",
+      "price": 1299.99,
+      "quantity": 50,
+      "brand": "Asus",
+      "shopname": "ElectroMall"
+    },
+    {
+      "id": 3,
+      "name": "Sony Wireless Headphones",
+      "description": "Wireless headphones with noise-cancellation technology.",
+      "price": 149.99,
+      "quantity": 200,
+      "brand": "Sony",
+      "shopname": "AudioEmporium"
+    }
+  ]
+  
