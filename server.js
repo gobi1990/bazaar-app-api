@@ -1,16 +1,15 @@
-require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const { Pool } = require('pg');
+import postgres from 'postgres';
 
-const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-});
+const sql = postgres({
+    host: process.env.DATABASE_HOST,
+    database: process.env.DATABASE_NAME,
+    username: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    ssl: 'require',
+  })
 
 
 app.get('/api/data', (req, res) => {
