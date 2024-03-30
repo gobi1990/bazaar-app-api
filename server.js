@@ -1,7 +1,8 @@
-const express = require('express');
+import express from 'express';
+import postgres from 'postgres';
+
 const app = express();
 const PORT = process.env.PORT || 3000;
-import postgres from 'postgres';
 
 const pool = postgres({
     host: process.env.DATABASE_HOST,
@@ -10,6 +11,8 @@ const pool = postgres({
     password: process.env.DATABASE_PASSWORD,
     ssl: 'require',
   });
+
+  app.use(express.json());
 
 
 app.get('/api/data', (req, res) => {
